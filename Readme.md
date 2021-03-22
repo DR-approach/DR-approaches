@@ -133,7 +133,8 @@ The basic information of these datasets is as follows:
 
 The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows: 
 
-![](C:\Users\123\Desktop\所有东西都在里面\重要文件备份\附件\Table 6.png)
+![image](Table 6.png)
+
 
 
 
