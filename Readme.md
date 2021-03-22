@@ -139,7 +139,6 @@ The projection results of 12 dimensionality reduction approaches on 8 datasets a
 
 
 
-
 ## Trial data
 
 The folder `trial data` contains the trial data of our evaluation.
