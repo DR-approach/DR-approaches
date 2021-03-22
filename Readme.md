@@ -133,7 +133,7 @@ The basic information of these datasets is as follows:
 
 The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows: 
 
-![image](Appendix/Table 6.png)
+![](Appendix/Table 6.png)
 
 
 
