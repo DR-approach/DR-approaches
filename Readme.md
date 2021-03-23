@@ -28,7 +28,7 @@ def getIsomap(data, k):
     result = isomap.fit_transform(data)
     return result
 
-def getMds(data, k):
+def getMds(data):
     mds = MDS(n_components=2, max_iter=500)
     result = mds.fit_transform(data)
     return result
@@ -43,17 +43,17 @@ def getTsnle(data, k):
     result = tsnle.fit_transform(data)
     return result
 
-def getPca(data, k):
+def getPca(data):
     pca = PCA(n_components=2)
     result = pca.fit_transform(data)
     return result
 
-def getFA(data, k):
+def getFA(data):
     fa = FactorAnalysis(n_components=2, max_iter=2000)
     result = fa.fit_transform(data)
     return result
 
-def getNMF(data, k):
+def getNMF(data):
     nmf = NMF(n_components=2, max_iter=400)
     result = nmf.fit_transform(data)
     return result
@@ -79,12 +79,12 @@ if __name__ == '__main__':
         tsneResult = getTsne(data, k)
         leResult = getLe(data, k)
         isomapResult = getIsomap(data, k)
-        mdsResult = getMds(data, k)
+        mdsResult = getMds(data)
         tsnleResult = getTsnle(data, k)
-        pcaResult = getPca(data, k)
+        pcaResult = getPca(data)
         lleResult = getLle(data, k)
-        faResult = getFA(data, k)
-        nmfResult = getNMF(data, k)
+        faResult = getFA(data)
+        nmfResult = getNMF(data)
         umapResult = getUmap(data, k)
 
         filePath = dataRootPath + dataName + '/'
