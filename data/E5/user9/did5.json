@@ -1,0 +1,1 @@
+{"tid": 5, "uid": 9, "did": 5, "uSortList": ["7", "5", "2", "1", "6", "4", "3", "8", "12", "11", "10", "9"], "time": 35.019, "symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "dataName": "olive", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [0, 1, 10, 6, 2, 3, 5, 11, 7, 9, 8, 4]}

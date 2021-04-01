@@ -1,0 +1,1 @@
+{"did": 3, "symboltype": ["1", "1", "1", "1", "1", "1", "0", "0", "0", "0", "0"], "uSortList": ["11", "5", "1", "7", "6", "10", "9", "12", "8", "4", "3", "2"], "tid": 5, "time": 21, "uid": 59, "dataName": "face5", "mList": [2, 7, 9, 8, 0, 6, 5, 10, 3, 11, 1, 4], "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"]}

@@ -1,0 +1,1 @@
+{"symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "tid": 5, "uSortList": ["7", "11", "6", "9", "4", "8", "5", "10", "12", "2", "3", "1"], "time": 103.504, "uid": 60, "mList": [2, 9, 4, 6, 3, 1, 0, 5, 11, 8, 7, 10], "dataName": "weather", "did": 6, "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"]}

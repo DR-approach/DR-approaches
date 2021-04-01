@@ -1,0 +1,1 @@
+{"tid": 5, "uid": 49, "did": 2, "uSortList": ["11", "4", "5", "7", "2", "12", "8", "6", "3", "10", "9", "1"], "time": 83.409, "symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "dataName": "dermatology", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [10, 2, 5, 1, 6, 11, 8, 9, 4, 7, 0, 3]}
