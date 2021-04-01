@@ -1,1 +1,0 @@
-{"tid": 5, "uid": "47", "did": 6, "uSortList": ["9", "6", "11", "7", "2", "10", "4", "3", "8", "12", "5", "1"], "time": 64.871, "symboltype": ["0", "0", "0", "1", "0", "1", "1", "1", "1", "1", "1"], "dataName": "weather", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [2, 9, 4, 6, 3, 1, 0, 5, 11, 8, 7, 10]}

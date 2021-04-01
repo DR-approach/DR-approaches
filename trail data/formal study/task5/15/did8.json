@@ -1,1 +1,0 @@
-{"tid": 5, "uid": "15", "did": 8, "uSortList": ["1", "4", "12", "9", "10", "11", "8", "5", "3", "2", "6", "7"], "time": 39.868, "symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "dataName": "world12d", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [1, 8, 3, 0, 11, 9, 10, 6, 5, 7, 2, 4]}

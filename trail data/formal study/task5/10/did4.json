@@ -1,1 +1,0 @@
-{"tid": 5, "uid": "10", "did": 4, "uSortList": ["7", "8", "4", "3", "6", "11", "12", "10", "9", "5", "2", "1"], "time": 6.357, "symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "dataName": "ecoli", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [3, 0, 2, 4, 1, 7, 11, 6, 8, 5, 10, 9]}
