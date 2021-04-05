@@ -59,7 +59,7 @@ def getNMF(data):
     return result
 
 def getUmap(data, k):
-    result = umap.UMAP(n_neighbors=k).fit_transform(data)
+    result = umap.UMAP(n_neighbors=k, n_epochs=500).fit_transform(data)
     return result
 
 
