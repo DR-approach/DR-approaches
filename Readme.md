@@ -120,10 +120,10 @@ def NPE(dataPath, filePath, k):
     np.savetxt(filePath + "npe" +str(k)+ ".csv", result, delimiter=",")
 
 if __name__ == '__main__':
-    k = 16
-    dataRootPath = '../data/task/'
+    k1 = 10
+    k2 = float(10)
+    dataRootPath = './Data/'
     dataNameList = os.listdir(dataRootPath)
-    dataNameList = ['weather']
     for id, dataName in enumerate(dataNameList):
         dataPath = dataRootPath + dataName + '/' + dataName + '.csv'
         data = np.loadtxt(open(dataPath, "rb"), delimiter=",", skiprows=0)
