@@ -131,8 +131,8 @@ if __name__ == '__main__':
         label = np.loadtxt(open(labelPath, "rb"), delimiter=",", skiprows=0)
         print(id + 1, dataName, data.shape)
         filePath = dataRootPath + dataName + '/'
-        LPP(dataPath, filePath, k)
-        NPE(dataPath, filePath, k)
+        LPP(dataPath, filePath, k1)
+        NPE(dataPath, filePath, k2)
 ```
 
 
