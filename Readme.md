@@ -5,6 +5,8 @@ The folder `DR approaches` contains the DR approaches used in our evaluation.
 Below is the code to run DR approaches, provided in `approaches.py` :
 
 ```python
+# ten DR approaches other than LPP and NPE
+
 import os
 from sklearn.decomposition import PCA, FactorAnalysis, NMF
 from sklearn.manifold import TSNE, Isomap, MDS, LocallyLinearEmbedding, SpectralEmbedding
