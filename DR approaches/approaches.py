@@ -70,9 +70,6 @@ def getNPE(dataPath, k):
     return result
 
 
-
-
-
 if __name__ == '__main__':
     dataRootPath = '../Data/'
     dataNameList = os.listdir(dataRootPath)
