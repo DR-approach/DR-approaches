@@ -68,7 +68,6 @@ def getLPP(dataPath, k):
     result = eng1.runLPP(dataPath, k)
     return result
 
-
 def getNPE(dataPath, k):
     eng2 = matlab.engine.start_matlab()
     result = eng2.runNPE(dataPath, k)
