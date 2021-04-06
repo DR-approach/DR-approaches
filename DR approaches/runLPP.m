@@ -1,0 +1,13 @@
+function lppY = runLPP(datapath, k)
+dataOrigin = csvread(datapath);
+data = mapminmax(dataOrigin', 0, 1)';
+options = [];
+options.Metric = 'Euclidean';
+options.NeighborMode = 'KNN';
+options.k = k;
+options.WeightMode = 'HeatKernel';
+options.t = 5;
+W = constructW(data,options);
+options.ReducedDim = 2;
+[eigvector, eigvalue] = LPP(W, options, data);
+lppY = data*eigvector;

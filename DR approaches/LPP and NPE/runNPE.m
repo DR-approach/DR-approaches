@@ -1,9 +1,0 @@
-function npeY = runNPE(datapath, k)
-dataOrigin = csvread(datapath);
-data = mapminmax(dataOrigin', 0, 1)';
-options = [];
-options.k = 16;
-options.NeighborMode = 'KNN';
-options.ReducedDim = 2;
-[eigvector, eigvalue] = NPE(options, data);
-npeY = data*eigvector;
