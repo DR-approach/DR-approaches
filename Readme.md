@@ -12,7 +12,7 @@ from sklearn.manifold import TSNLE        # You need to copy t_snle.py to the di
 from sklearn import preprocessing
 import numpy as np
 import umap
-import matlab.engine
+import matlab.engine  # If you want to run LPP and NPE, you need to configure the MATLAB environment
 
 def getLe(data, k):
     le = SpectralEmbedding(n_components=2, n_neighbors=k)
