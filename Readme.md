@@ -4,15 +4,22 @@ The folder `DR approaches` contains the DR approaches used in our evaluation.
 
 Below is the code to run twelve approaches, provided in `approaches.py` :
 
+- If you want to run LPP and NPE, you need to configure the MATLAB environment
+- You need to copy t_snle.py to the directory where t_SNE.py is located
+
 ```python
 import os
 from sklearn.decomposition import PCA, FactorAnalysis, NMF
 from sklearn.manifold import TSNE, Isomap, MDS, LocallyLinearEmbedding, SpectralEmbedding
-from sklearn.manifold import TSNLE        # You need to copy t_snle.py to the directory where t_SNE.py is located
 from sklearn import preprocessing
 import numpy as np
 import umap
-import matlab.engine  # If you want to run LPP and NPE, you need to configure the MATLAB environment
+
+# LPP and NPE
+import matlab.engine  
+
+# t-SNLE
+from sklearn.manifold import TSNLE        
 
 def getLe(data, k):
     le = SpectralEmbedding(n_components=2, n_neighbors=k)
@@ -73,7 +80,6 @@ def getNPE(dataPath, k):
     result = eng2.runNPE(dataPath, k)
     return result
 
-
 if __name__ == '__main__':
     dataRootPath = '../Data/'
     dataNameList = os.listdir(dataRootPath)
@@ -113,20 +119,9 @@ if __name__ == '__main__':
         np.savetxt(filePath + "npe.csv", npeResult, delimiter=",")
 ```
 
-
-
-
-
-
 ## Datasets
 
-The folder `Data` contains the datasets in the *csv* format used in our study.
-
-
-
-
-
-
+The folder `Data` contains the datasets in the *csv*  format used in our study.
 
 The basic information of these datasets is as follows:
 
@@ -141,23 +136,14 @@ The basic information of these datasets is as follows:
 | Weather       | 366        | 194        | 7        |
 | Olive         | 572        | 8          | 3        |
 
+## Projection
 
+The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows:
 
-The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows: 
-
-![](Appendix/Figure1.png)
-
-
-
-
+[![img](https://github.com/DR-approach/DR-approaches/raw/main/Appendix/Figure1.png)](https://github.com/DR-approach/DR-approaches/blob/main/Appendix/Figure1.png)
 
 ## Trial data
 
 The folder `trial data` contains the trial data of our evaluation.
 
 You can obtain our analysis results by directly run `compute.py`.
-
-
-
-
-
