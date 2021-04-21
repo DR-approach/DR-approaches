@@ -2,18 +2,24 @@
 
 The folder `DR approaches` contains the DR approaches used in our evaluation.
 
-Below is the code to run ten DR approaches other than LPP and NPE, provided in `approaches.py` :
+Below is the code to run twelve approaches, provided in `approaches.py` :
+
+- If you want to run LPP and NPE, you need to configure the MATLAB environment
+- You need to copy t_snle.py to the directory where t_SNE.py is located
 
 ```python
-# ten DR approaches other than LPP and NPE
-
 import os
 from sklearn.decomposition import PCA, FactorAnalysis, NMF
 from sklearn.manifold import TSNE, Isomap, MDS, LocallyLinearEmbedding, SpectralEmbedding
-from sklearn.manifold import TSNLE
 from sklearn import preprocessing
 import numpy as np
 import umap
+
+# LPP and NPE
+import matlab.engine  
+
+# t-SNLE
+from sklearn.manifold import TSNLE        
 
 def getLe(data, k):
     le = SpectralEmbedding(n_components=2, n_neighbors=k)
@@ -21,8 +27,8 @@ def getLe(data, k):
     return result
 
 def getLle(data, k):
-    mds = LocallyLinearEmbedding(n_neighbors=k, n_components=2, max_iter=200)
-    result = mds.fit_transform(data)
+    LLE = LocallyLinearEmbedding(n_neighbors=k, n_components=2, max_iter=200)
+    result = LLE.fit_transform(data)
     return result
 
 def getIsomap(data, k):
@@ -36,12 +42,12 @@ def getMds(data):
     return result
 
 def getTsne(data, k):
-    tsne = TSNE(n_components=2, perplexity=k, early_exaggeration=6, n_iter=3000)
+    tsne = TSNE(method='exact',n_components=2, perplexity=k, early_exaggeration=6, n_iter=3000)
     result = tsne.fit_transform(data)
     return result
 
 def getTsnle(data, k):
-    tsnle = TSNLE(n_components=2, perplexity=k, early_exaggeration=6, n_iter=3000)
+    tsnle = TSNLE(method='exact',n_components=2, perplexity=k, early_exaggeration=6, n_iter=3000)
     result = tsnle.fit_transform(data)
     return result
 
@@ -61,12 +67,21 @@ def getNMF(data):
     return result
 
 def getUmap(data, k):
-    result = umap.UMAP(n_neighbors=k, n_epochs=500).fit_transform(data)
+    result = umap.UMAP(n_neighbors=k,n_epochs=500).fit_transform(data)
     return result
 
+def getLPP(dataPath, k):
+    eng1 = matlab.engine.start_matlab()
+    result = eng1.runLPP(dataPath, k)
+    return result
+
+def getNPE(dataPath, k):
+    eng2 = matlab.engine.start_matlab()
+    result = eng2.runNPE(dataPath, k)
+    return result
 
 if __name__ == '__main__':
-    dataRootPath = './Data/'
+    dataRootPath = '../Data/'
     dataNameList = os.listdir(dataRootPath)
     k = 10
     for dataName in dataNameList:
@@ -86,6 +101,8 @@ if __name__ == '__main__':
         faResult = getFA(data)
         nmfResult = getNMF(data)
         umapResult = getUmap(data, k)
+        lppResult=getLPP(dataPath, k)
+        npeResult=getNPE(dataPath,float(k)) #Integer of type float
 
         filePath = dataRootPath + dataName + '/'
         np.savetxt(filePath + "tsne.csv", tsneResult, delimiter=",")
@@ -98,56 +115,13 @@ if __name__ == '__main__':
         np.savetxt(filePath + "fa.csv", faResult, delimiter=",")
         np.savetxt(filePath + "nmf.csv", nmfResult, delimiter=",")
         np.savetxt(filePath + "umap.csv", umapResult, delimiter=",")
+        np.savetxt(filePath + "lpp.csv", lppResult, delimiter=",")
+        np.savetxt(filePath + "npe.csv", npeResult, delimiter=",")
 ```
-
-Below is the code to run LPP and NPE, provided in `matlabfun.py` :
-
-```python
-
-import os
-import numpy as np
-import matlab.engine
-
-
-def LPP(dataPath, filePath, k):
-    eng1 = matlab.engine.start_matlab()
-    result = eng1.runLPP(dataPath, k)
-    np.savetxt(filePath + "lpp" +str(k)+ ".csv", result, delimiter=",")
-
-def NPE(dataPath, filePath, k):
-    eng2 = matlab.engine.start_matlab()
-    result = eng2.runNPE(dataPath, k)
-    np.savetxt(filePath + "npe" +str(k)+ ".csv", result, delimiter=",")
-
-if __name__ == '__main__':
-    k1 = 10
-    k2 = float(10)
-    dataRootPath = './Data/'
-    dataNameList = os.listdir(dataRootPath)
-    for id, dataName in enumerate(dataNameList):
-        dataPath = dataRootPath + dataName + '/' + dataName + '.csv'
-        data = np.loadtxt(open(dataPath, "rb"), delimiter=",", skiprows=0)
-        labelPath = dataRootPath + dataName + '/' + dataName + '-label.csv'
-        label = np.loadtxt(open(labelPath, "rb"), delimiter=",", skiprows=0)
-        print(id + 1, dataName, data.shape)
-        filePath = dataRootPath + dataName + '/'
-        LPP(dataPath, filePath, k1)
-        NPE(dataPath, filePath, k2)
-```
-
-
-
-
 
 ## Datasets
 
-The folder `Data` contains the datasets in the *csv* format used in our study.
-
-
-
-
-
-
+The folder `Data` contains the datasets in the *csv*  format used in our study.
 
 The basic information of these datasets is as follows:
 
@@ -162,23 +136,14 @@ The basic information of these datasets is as follows:
 | Weather       | 366        | 194        | 7        |
 | Olive         | 572        | 8          | 3        |
 
+## Projection
 
+The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows:
 
-The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows: 
-
-![](Appendix/Figure1.png)
-
-
-
-
+[![img](https://github.com/DR-approach/DR-approaches/raw/main/Appendix/Figure1.png)](https://github.com/DR-approach/DR-approaches/blob/main/Appendix/Figure1.png)
 
 ## Trial data
 
 The folder `trial data` contains the trial data of our evaluation.
 
 You can obtain our analysis results by directly run `compute.py`.
-
-
-
-
-
