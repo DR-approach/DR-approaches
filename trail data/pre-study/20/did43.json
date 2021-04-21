@@ -1,1 +1,1 @@
-{"dmid": "43", "parameter": 0, "time": 771.033, "dataName": "mnist64", "uid": "20", "tid": 5, "methodName": "lpp"}
+{"tid": 5, "time": 771.033, "dataName": "mnist64", "dmid": 43, "parameter": 0, "methodName": "lpp", "uid": "20"}

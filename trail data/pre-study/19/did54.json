@@ -1,1 +1,1 @@
-{"dmid": "54", "tid": 5, "time": 13.755, "dataName": "boston", "uid": "19", "parameter": 0, "methodName": "tsne"}
+{"tid": 5, "time": 13.755, "dataName": "boston", "dmid": 1, "parameter": 0, "methodName": "tsne", "uid": "19"}

@@ -1,1 +1,1 @@
-{"dmid": "13", "tid": 5, "time": 120.316, "dataName": "dermatology", "uid": "11", "parameter": 2, "methodName": "tsne"}
+{"tid": 5, "time": 120.316, "dataName": "dermatology", "dmid": 2, "parameter": 2, "methodName": "tsne", "uid": "11"}

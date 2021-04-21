@@ -1,1 +1,1 @@
-{"parameter": 4, "tid": 5, "time": 14.111, "dmid": "18", "uid": 26, "dataName": "ecoli", "methodName": "tsne"}
+{"tid": 5, "time": 14.111, "dataName": "ecoli", "dmid": 1, "parameter": 4, "methodName": "tsne", "uid": "13"}

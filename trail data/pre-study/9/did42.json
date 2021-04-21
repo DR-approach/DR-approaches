@@ -1,1 +1,1 @@
-{"dmid": "42", "parameter": 0, "time": 1176.667, "dataName": "mnist64", "uid": "9", "tid": 5, "methodName": "tsnle"}
+{"tid": 5, "time": 1176.667, "dataName": "mnist64", "dmid": 42, "parameter": 0, "methodName": "tsnle", "uid": "9"}

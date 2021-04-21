@@ -1,1 +1,1 @@
-{"parameter": 4, "tid": 5, "time": 430.589, "dmid": "9", "uid": 22, "dataName": "weather", "methodName": "tsne"}
+{"tid": 5, "time": 430.589, "dataName": "weather", "dmid": 9, "parameter": 4, "methodName": "tsne", "uid": "9"}

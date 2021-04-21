@@ -1,1 +1,1 @@
-{"dmid": "35", "parameter": 4, "time": 404.512, "dataName": "mnist64", "uid": "6", "tid": 5, "methodName": "isomap"}
+{"tid": 5, "time": 404.512, "dataName": "mnist64", "dmid": 35, "parameter": 4, "methodName": "isomap", "uid": "6"}
