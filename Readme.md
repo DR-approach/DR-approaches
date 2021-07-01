@@ -140,7 +140,11 @@ The basic information of these datasets is as follows:
 
 The projection results of 12 dimensionality reduction approaches on 8 datasets are as follows:
 
- [![img](https://github.com/DR-approach/DR-approaches/raw/main/Appendix/projection)](https://github.com/DR-approach/DR-approaches/blob/main/Appendix/projection.pdf)
+ [![img](https://github.com/DR-approach/DR-approaches/raw/main/Appendix/projection.pdf)](https://github.com/DR-approach/DR-approaches/blob/main/Appendix/projection.pdf)
+ 
+Color-coded projection results:
+
+ [![img](https://github.com/DR-approach/DR-approaches/raw/main/Appendix/pro-color.pdf)](https://github.com/DR-approach/DR-approaches/blob/main/Appendix/pro-color.pdf)
 
 ## Trial data
 pr
