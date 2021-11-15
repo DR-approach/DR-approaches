@@ -1,1 +1,0 @@
-{"tid": 5, "uid": 45, "did": 1, "uSortList": ["6", "10", "11", "9", "5", "1", "7", "3", "4", "2", "12", "8"], "time": 57.212, "symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "dataName": "boston", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [7, 5, 1, 10, 0, 9, 6, 11, 4, 3, 2, 8]}

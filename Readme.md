@@ -146,8 +146,4 @@ Color-coded projection results:
 
  [![img](https://github.com/DR-approach/DR-approaches/raw/main/Appendix/pro-color.pdf)](https://github.com/DR-approach/DR-approaches/blob/main/Appendix/pro-color.pdf)
 
-## Trial data
-pr
-The folder `trial data` contains the trial data of our evaluation.
 
-You can obtain our analysis results by directly run `compute.py`.

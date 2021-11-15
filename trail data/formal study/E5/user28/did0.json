@@ -1,1 +1,0 @@
-{"tid": 5, "uid": 28, "did": 0, "uSortList": ["2", "6", "3", "1", "11", "12", "10", "5", "9", "8", "4", "7"], "time": 74.531, "symboltype": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"], "dataName": "iris", "methodNameList": ["tsne", "umap", "isomap", "mds", "lle", "le", "lpp", "npe", "pca", "fa", "nmf", "tsnle"], "mList": [1, 5, 0, 2, 7, 4, 3, 8, 9, 11, 6, 10]}
